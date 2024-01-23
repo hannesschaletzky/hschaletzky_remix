@@ -16,7 +16,7 @@ export default function Index() {
   const experience = new Date().getFullYear() - 2019;
 
   return (
-    <div className="flex flex-col gap-1 w-screen h-screen justify-center items-center text-center font-roboto text-xl">
+    <div className="flex flex-col gap-1 justify-center items-center text-center font-roboto text-md p-6 [text-shadow:_0_1px_0_rgb(0_0_0_/_10%)] lg:text-xl">
       <div>I am Hannes </div>
       <div>I do software engineering in</div>
       <br />
