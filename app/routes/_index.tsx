@@ -39,7 +39,7 @@ export default function Index() {
         <a href="/projects">past projects</a>
       </u>
       <u>
-        <a href="/portrait">portrait & skills</a>
+        <a href="/portrait">portrait & stack</a>
       </u>
 
       <br />
