@@ -38,6 +38,9 @@ export default function Index() {
       <u>
         <a href="/projects">past projects</a>
       </u>
+      <u>
+        <a href="/portrait">portrait & skills</a>
+      </u>
 
       <br />
       <div className="flex gap-4">
