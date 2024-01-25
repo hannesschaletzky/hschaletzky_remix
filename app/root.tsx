@@ -26,11 +26,25 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="p-6 font-roboto [text-shadow:_0_1px_0_rgb(0_0_0_/_10%)] text-xl">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+
+        {/* diagonal rectangle in background */}
+        <div
+          className="fixed
+                  top-[200px]
+                  -left-32
+                  w-14/7
+                  h-200px
+                  transform
+                  -rotate-30
+                  bg-gray-300
+                  opacity-30
+                  -z-10"
+        ></div>
       </body>
     </html>
   );

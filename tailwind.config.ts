@@ -13,6 +13,9 @@ export default {
       zIndex: {
         "-10": "-10",
       },
+      height: {
+        "200px": "200px",
+      },
       fontFamily: {
         roboto: ["Roboto Mono", "sans-serif"],
       },

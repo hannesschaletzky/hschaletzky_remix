@@ -1,6 +1,5 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import type { MetaFunction } from "@remix-run/node";
+import ContactIcons from "~/components/contactIcons";
 
 export const meta: MetaFunction = () => {
   return [
@@ -16,9 +15,11 @@ export default function Index() {
   const experience = new Date().getFullYear() - 2019;
 
   return (
-    <div className="flex flex-col gap-1 justify-center items-center text-center font-roboto text-md p-6 [text-shadow:_0_1px_0_rgb(0_0_0_/_10%)] lg:text-xl lg:h-screen">
+    <div className="flex flex-col gap-1 justify-center items-center text-center lg:h-screen">
       <div>I am Hannes</div>
-      <div>I do software engineering in</div>
+      <div>
+        I do <b>software</b> engineering in
+      </div>
       <br />
       <div className="">
         ...full stack <br />
@@ -30,7 +31,9 @@ export default function Index() {
         ...data analytics <br />
       </div>
       <br />
-      <div>I am a generalist</div>
+      <div>
+        I am a <b>generalist</b>
+      </div>
       <div>...with +{experience} years of experience</div>
       <div>...and open to freelance opportunities</div>
       <br />
@@ -41,39 +44,7 @@ export default function Index() {
       <u>
         <a href="/portrait">portrait & stack</a>
       </u>
-
-      <br />
-      <div className="flex gap-4">
-        <a
-          href="https://github.com/hannesschaletzky"
-          target="_blank"
-          rel="noreferrer"
-          title="Icon from https://www.flaticon.com/free-icons/github"
-        >
-          <img src="/github.png" alt="github" width={50} height={50} />
-        </a>
-        <a
-          href="https://linkedin.com/in/hannesschaletzky/"
-          target="_blank"
-          rel="noreferrer"
-          title="Icon from https://www.flaticon.com/free-icons/linkedin"
-        >
-          <img src="/linkedin.png" alt="linkedin" width={50} height={50} />
-        </a>
-      </div>
-      {/* Background diagonal rectangle */}
-      <div
-        className="fixed
-                  top-1/3
-                  -left-32
-                  w-14/7
-                  h-1/4
-                  transform
-                  -rotate-30
-                  bg-gray-200
-                  opacity-30
-                  -z-10"
-      ></div>
+      <ContactIcons />
     </div>
   );
 }
