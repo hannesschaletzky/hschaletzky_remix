@@ -8,5 +8,95 @@
     "url": "https://hschaletzky.com",
     "repo": "https://github.com/hannesschaletzky/hschaletzky_remix",
     "stack": ["Remix", "TypeScript", "React", "Tailwind", "Design"]
+  },
+  {
+    "title": "ugly christmas sweater voting tool as web app",
+    "highlight": "ugly, sweater, voting",
+    "from": "11.2023",
+    "until": "12.2023",
+    "employer": "christmas party",
+    "url": "",
+    "repo": "https://github.com/hannesschaletzky/ugly_sweater",
+    "stack": ["NextJS", "TypeScript", "React", "Tailwind", ""]
+  },
+  {
+    "title": "provisioning digital ocean droplet with terraform and cloud-init",
+    "highlight": "droplet, terraform, cloud-init",
+    "from": "11.2023",
+    "until": "12.2023",
+    "employer": "myself",
+    "url": "",
+    "repo": "https://github.com/hannesschaletzky/terraform-digitalocean-droplet",
+    "stack": ["terraform", "DigitalOcean", "cloud-init", "", ""]
+  },
+  {
+    "title": "website for a supportive association for my former school",
+    "highlight": "website, association, school",
+    "from": "09.2023",
+    "until": "10.2023",
+    "employer": "Freundeskreis Peutinger e.V.",
+    "url": "https://freundeskreis-peutinger.de/",
+    "repo": "",
+    "stack": ["Wordpress", "", "", "", ""]
+  },
+  {
+    "title": "web scraper for german beach volleyball tournament results",
+    "highlight": "scraper, tournament, results",
+    "from": "10.2022",
+    "until": "12.2022",
+    "employer": "🏐❤️",
+    "url": "",
+    "repo": "https://github.com/hannesschaletzky/beachstats_scraper",
+    "stack": ["Node", "TypeScript", "JEST", "node-cron", "http"]
+  },
+  {
+    "title": "a shopping list for people in covid quarantine",
+    "highlight": "shopping, list, covid",
+    "from": "02.2022",
+    "until": "02.2022",
+    "employer": "🦠",
+    "url": "https://quarantine.hschaletzky.de/",
+    "repo": "https://github.com/hannesschaletzky/quarantine_list",
+    "stack": ["NextJS", "TypeScript", "React", "Tailwind", "Deta"]
+  },
+  {
+    "title": "a web app to find proper surf spots in portugal",
+    "highlight": "portugal, surf, spots",
+    "from": "04.2021",
+    "until": "05.2021",
+    "employer": "LeWagon / SurfEasy",
+    "url": "",
+    "repo": "https://github.com/CharlesOuverleaux/surfeasy",
+    "stack": ["Ruby", "Redis", "HTML", "Stockfish", "🏄"]
+  },
+  {
+    "title": "citefight, a multiplayer twitter guessing game",
+    "highlight": "multiplayer, twitter, game",
+    "from": "12.2020",
+    "until": "03.2021",
+    "employer": "myself",
+    "url": "",
+    "repo": "https://github.com/hannesschaletzky/citefight",
+    "stack": ["Node", "TypeScript", "React", "Pusher", "Twitter"]
+  },
+  {
+    "title": "an iOS cycling GPS tracker app for your 🚲 journeys",
+    "highlight": "iOS, GPS, tracker",
+    "from": "10.2020",
+    "until": "12.2020",
+    "employer": "myself",
+    "url": "",
+    "repo": "https://github.com/hannesschaletzky/CycleLogVC",
+    "stack": ["iOS", "Swift", "GPS", "cycling", ""]
+  },
+  {
+    "title": "iOS app to find bars and clubs to go to",
+    "highlight": "iOS, bars, clubs",
+    "from": "07.2015",
+    "until": "10.2016",
+    "employer": "nightlive",
+    "url": "",
+    "repo": "https://github.com/hannesschaletzky/nightlive",
+    "stack": ["iOS", "Swift", "GoogleAPI", "FacebookAPI", "StoryboardUI"]
   }
 ]

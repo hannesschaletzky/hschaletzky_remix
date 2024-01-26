@@ -28,5 +28,55 @@
     "url": "https://digitalservice.bund.de/blog/digitale-identitaeten-bundesident-laeuft-nach-pilotphase-aus-erkenntnisse-fliessen-in-gesamtvorhaben-ein",
     "repo": "https://github.com/digitalservicebund/useid-backend-service",
     "stack": ["Kotlin", "SpringBoot", "JavaScript", "Kubernetes", "API Design"]
+  },
+  {
+    "title": "Web app for managing customer data to improve insurance sales",
+    "highlight": "Web, app, insurance",
+    "from": "10.2021",
+    "until": "11.2021",
+    "employer": "FINANZGARAGE GmbH",
+    "url": "",
+    "repo": "",
+    "stack": ["Node", "NextJS", "React", "TypeScript", "CSS"]
+  },
+  {
+    "title": "Setup of LAN patch network, NAS servers and Microsoft Office for the company",
+    "highlight": "LAN, Microsoft, servers",
+    "from": "07.2021",
+    "until": "09.2021",
+    "employer": "Dörsing Unternehmensberatung GmbH",
+    "url": "",
+    "repo": "",
+    "stack": ["Telegärtner", "MS365", "MSExchange", "", ""]
+  },
+  {
+    "title": "ETL tool to improve the data audit process",
+    "highlight": "data, audit",
+    "from": "03.2020",
+    "until": "03.2021",
+    "employer": "KPMG",
+    "url": "",
+    "repo": "",
+    "stack": ["C#", ".NET", "MS SQL Server", "VBA", "Excel"]
+  },
+  {
+    "title": "A web frontend for the wallbox loading process of e-vehicles",
+    "highlight": "web, frontend, wallbox",
+    "from": "12.2017",
+    "until": "02.2018",
+    "employer": "MHP a Porsche Company",
+    "url": "",
+    "repo": "",
+    "stack": ["Node", "Angular", "TypeScript", "SCSS", ""]
+  },
+  {
+    "title": "iOS webshop for an e-commerce company",
+    "highlight": "iOS, e-commerce",
+    "from": "04.2016",
+    "until": "06.2016",
+    "employer": "ECENTA",
+    "url": "",
+    "repo": "",
+    "stack": ["iOS", "Swift", "StoryboardUI", "SAP hybris commerce", ""]
   }
 ]

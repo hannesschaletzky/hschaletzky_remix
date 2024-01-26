@@ -94,8 +94,8 @@ export default function ProjectsPage() {
               {project.duration} {project.duration == 1 ? "month" : "months"}
             </b>
             {" of:"}
-            {project.stack.map((item) => (
-              <div className="" key={item}>
+            {project.stack.map((item, i) => (
+              <div className="" key={`${i}-${item}`}>
                 {item}
               </div>
             ))}
@@ -107,11 +107,11 @@ export default function ProjectsPage() {
               {project.url != "" ? (
                 <u>
                   <a href={project.url} target="_blank" rel="noreferrer">
-                    url
+                    hosted here
                   </a>
                 </u>
               ) : (
-                <span>no url 😔</span>
+                <span>not hosted 😔</span>
               )}
             </div>
             {/* repository */}
