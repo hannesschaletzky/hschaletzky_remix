@@ -1,0 +1,12 @@
+[
+  {
+    "title": "my website - based on remix",
+    "highlight": "website, remix",
+    "from": "01.2024",
+    "until": "01.2024",
+    "employer": "myself",
+    "url": "https://hschaletzky.com",
+    "repo": "https://github.com/hannesschaletzky/hschaletzky_remix",
+    "stack": ["Remix", "TypeScript", "React", "Tailwind", "Design"]
+  }
+]
