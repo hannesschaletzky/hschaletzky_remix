@@ -35,7 +35,8 @@ export default function App() {
         {/* diagonal rectangle in background */}
         <div
           className="fixed
-                  top-[200px]
+                  top-[300px]
+                  lg:top-[400px]
                   -left-32
                   w-14/7
                   h-150px

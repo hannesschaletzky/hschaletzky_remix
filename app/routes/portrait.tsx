@@ -51,13 +51,16 @@ export default function Portrait() {
   return (
     <div className="flex flex-col justify-center items-center gap-2 lg:text-center p-6">
       {/* key points */}
-      <h2 className="w-full">{"> "}Hannes Schaletzky</h2>
-      <h2 className="w-full">
-        {"> "}B.Sc. Business Informatics University Graduate
-      </h2>
-      <h2 className="w-full">
+      <div className="w-full">{"/ / "}Hannes Schaletzky</div>
+      <div className="w-full">
+        {"> "}B.Sc. Business Informatics <mark>university</mark> graduate 2018
+      </div>
+      <div className="w-full">
         {"> "}German, {age} years old
-      </h2>
+      </div>
+      <div className="w-full">
+        {"> "}Former coding camp <mark>teacher</mark>
+      </div>
       {/* image */}
       <div className="mt-8 mb-8 w-44 h-44">
         <img

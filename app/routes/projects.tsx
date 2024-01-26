@@ -3,12 +3,22 @@ import projectsImport from "~/projects.json";
 import { calculateMonthsDifference } from "~/utils";
 
 export default function ProjectsPage() {
+  function highlightWords(title: string, list: string) {
+    const splittedList = list.split(",").map((word: string) => word.trim());
+    const highlightedString = title.split(" ").map((word) => {
+      return splittedList.includes(word) ? `<mark>${word}</mark>` : word;
+    });
+    return <div>{highlightedString.join(" ")}</div>;
+  }
+
   const projects = projectsImport.map((project) => {
     return {
       ...project,
       duration: calculateMonthsDifference(project.from, project.until),
+      titleWithHighlights: highlightWords(project.title, project.highlight),
     };
   });
+
   return (
     <div className="container">
       {/* first screen */}
@@ -22,7 +32,11 @@ export default function ProjectsPage() {
         <div className="tiktok p-6 flex flex-col gap-4" key={project.title}>
           <div>
             {"> "}
-            {project.title}
+            <span
+              dangerouslySetInnerHTML={{
+                __html: project.titleWithHighlights.props.children,
+              }}
+            />
           </div>
           <div>
             @{project.employer}
@@ -30,9 +44,9 @@ export default function ProjectsPage() {
             {project.from} - {project.until}
           </div>
           <div>
-            {"> "}
-            {project.duration} {project.duration == 1 ? "month" : "months"}
-            {" of:"}
+            <b>
+              {project.duration} {project.duration == 1 ? "month" : "months"}
+            </b>
             {project.stack.map((item) => (
               <div className="" key={item}>
                 {item}
@@ -42,7 +56,7 @@ export default function ProjectsPage() {
           <div className="flex flex-col justify-start items-start gap-4">
             {/* url */}
             <div>
-              {"> "}
+              {"/ "}
               {project.url != "" ? (
                 <u>
                   <a href={project.url} target="_blank" rel="noreferrer">
@@ -55,7 +69,7 @@ export default function ProjectsPage() {
             </div>
             {/* repository */}
             <div>
-              {"> "}
+              {"/ "}
               {project.repo != "" ? (
                 <u>
                   <a href={project.repo} target="_blank" rel="noreferrer">

@@ -16,9 +16,9 @@ export default function Index() {
 
   return (
     <div className="flex flex-col gap-1 justify-center items-center text-center lg:h-screen p-6">
-      <div>I am Hannes 👋</div>
+      <div>I am Hannes</div>
       <div>
-        I do <b>software</b> engineering in
+        I do <mark>software</mark> engineering in
       </div>
       <br />
       <div className="">
@@ -32,16 +32,18 @@ export default function Index() {
       </div>
       <br />
       <div>
-        I am a <b>generalist</b>
+        I am a <mark>generalist</mark>
       </div>
       <div>...with +{experience} years of experience</div>
-      <div>...and open to freelance opportunities</div>
+      <div>
+        ...and open to <mark>freelance</mark> opportunities
+      </div>
       <br />
       <u>
-        <a href="/projects">past projects</a>
+        <a href="/portrait">portrait & stack</a>
       </u>
       <u>
-        <a href="/portrait">portrait & stack</a>
+        <a href="/projects">past projects</a>
       </u>
       <br />
       <ContactIcons />
