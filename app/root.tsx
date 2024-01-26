@@ -26,7 +26,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="p-6 font-roboto [text-shadow:_0_1px_0_rgb(0_0_0_/_10%)] text-xl">
+      <body className="font-roboto [text-shadow:_0_1px_0_rgb(0_0_0_/_10%)] text-xl">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
@@ -38,10 +38,10 @@ export default function App() {
                   top-[200px]
                   -left-32
                   w-14/7
-                  h-200px
+                  h-150px
                   transform
                   -rotate-30
-                  bg-gray-300
+                  bg-gray-200
                   opacity-30
                   -z-10"
         ></div>

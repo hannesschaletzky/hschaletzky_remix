@@ -1,5 +1,5 @@
 import ContactIcons from "~/components/contactIcons";
-import { calculateAge } from "~/utils/utils";
+import { calculateAge } from "~/utils";
 
 export default function Portrait() {
   const age = calculateAge();
@@ -21,7 +21,7 @@ export default function Portrait() {
       "Git",
       "Terminal",
       "VS Code",
-      "SQL",
+      "My Macbook",
       "Shortcuts 😉",
     ],
     sometimes: [
@@ -49,7 +49,7 @@ export default function Portrait() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center gap-2 lg:text-center">
+    <div className="flex flex-col justify-center items-center gap-2 lg:text-center p-6">
       {/* key points */}
       <h2 className="w-full">{"> "}Hannes Schaletzky</h2>
       <h2 className="w-full">
@@ -93,7 +93,6 @@ export default function Portrait() {
       </div>
 
       <ContactIcons />
-
       <a
         href="/"
         className="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5"

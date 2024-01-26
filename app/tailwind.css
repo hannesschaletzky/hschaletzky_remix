@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  max-width: 100vw !important; /* with this, we need to tackle a max-width due to a random media query by tailwind */
+}
+
+.tiktok {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+}

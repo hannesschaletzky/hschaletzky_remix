@@ -14,7 +14,7 @@ export default {
         "-10": "-10",
       },
       height: {
-        "200px": "200px",
+        "150px": "150px",
       },
       fontFamily: {
         roboto: ["Roboto Mono", "sans-serif"],
