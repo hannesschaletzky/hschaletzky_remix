@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Platform for law and justice services in Germany",
+    "from": "06.2023",
+    "until": "01.2024",
+    "employer": "DigitalService",
+    "url": "https://service.justiz.de",
+    "repo": "https://github.com/digitalservicebund/a2j-rechtsantragstelle",
+    "stack": ["Remix", "TypeScript", "Strapi", "xState Machine", "Kubernetes"]
+  },
+  {
+    "title": "Company wide time tracking tool interacting with Troi and Personio",
+    "from": "12.2022",
+    "until": "01.2024",
+    "employer": "DigitalService",
+    "url": "https://track-your-time.dev.ds4g.net/login",
+    "repo": "https://github.com/digitalservicebund/achill",
+    "stack": ["Remix", "TypeScript", "React", "Playwright", "Svelte"]
+  },
+  {
+    "title": "BundesIdent backend for electronic identification (eID) in Germany",
+    "from": "07.2022",
+    "until": "06.2023",
+    "employer": "DigitalService",
+    "url": "https://digitalservice.bund.de/blog/digitale-identitaeten-bundesident-laeuft-nach-pilotphase-aus-erkenntnisse-fliessen-in-gesamtvorhaben-ein",
+    "repo": "https://github.com/digitalservicebund/useid-backend-service",
+    "stack": ["Kotlin", "SpringBoot", "JavaScript", "Kubernetes", "API Design"]
+  }
+]
