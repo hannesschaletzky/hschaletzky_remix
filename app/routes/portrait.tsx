@@ -53,7 +53,7 @@ export default function Portrait() {
       {/* key points */}
       <div className="w-full">{"/ / "}Hannes Schaletzky</div>
       <div className="w-full">
-        {"> "}B.Sc. Business Informatics <mark>university</mark> graduate 2018
+        {"> "}2018 B.Sc. Business Informatics <mark>university</mark> graduate
       </div>
       <div className="w-full">
         {"> "}German, {age} years old
@@ -100,7 +100,7 @@ export default function Portrait() {
         href="/"
         className="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5"
       >
-        Return
+        Homepage
       </a>
     </div>
   );

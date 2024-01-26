@@ -22,13 +22,13 @@ export default function Index() {
       </div>
       <br />
       <div className="">
-        ...full stack <br />
-        ...backend <br />
-        ...frontend <br />
-        ...databases <br />
-        ...infrastructure <br />
-        ...process automation <br />
-        ...data analytics <br />
+        {"> "}full stack <br />
+        {"> "}backend <br />
+        {"> "}frontend <br />
+        {"> "}databases <br />
+        {"> "}infrastructure <br />
+        {"> "}process automation <br />
+        {"> "}data analytics <br />
       </div>
       <br />
       <div>

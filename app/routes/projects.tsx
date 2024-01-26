@@ -25,7 +25,7 @@ export default function ProjectsPage() {
       <div className="tiktok p-6 flex flex-col gap-8 justify-center items-start">
         <div>Hey ✌️</div>
         <div>Swipe up to see my past projects, they are sorted by recency.</div>
-        <div>{"> "}It&apos;s like TikTok 😉</div>
+        <div>{"> "}It&apos;s like TikTok 😄</div>
       </div>
       {/* projects */}
       {projects.map((project, i) => (
@@ -47,6 +47,7 @@ export default function ProjectsPage() {
             <b>
               {project.duration} {project.duration == 1 ? "month" : "months"}
             </b>
+            {" of:"}
             {project.stack.map((item) => (
               <div className="" key={item}>
                 {item}
@@ -94,7 +95,7 @@ export default function ProjectsPage() {
           href="/"
           className="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5"
         >
-          Return
+          Homepage
         </a>
       </div>
     </div>
