@@ -35,30 +35,28 @@ export default function App() {
         {/* diagonal rectangle from left bottom to top right */}
         <div
           className="fixed
-                  top-[300px]
+                  top-[400px]
                   lg:top-[400px]
                   -left-32
                   w-14/7
                   h-150px
                   transform
                   -rotate-30
-                  bg-gradient-to-t
-                  from-gray-300
+                  bg-gray-300
                   opacity-30
                   -z-10"
         ></div>
         {/* diagonal rectangle from left top to bottom right */}
         <div
           className="fixed
-                  top-[100px]
+                  top-[200px]
                   lg:top-[400px]
                   -left-32
                   w-14/7
                   h-150px
                   transform
                   rotate-45
-                  bg-gradient-to-br
-                  from-gray-400
+                  bg-gray-200
                   opacity-30
                   -z-10"
         ></div>
