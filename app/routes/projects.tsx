@@ -141,7 +141,7 @@ export default function ProjectsPage() {
           href="/"
           className="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5"
         >
-          Homepage
+          Back
         </a>
       </div>
     </div>
