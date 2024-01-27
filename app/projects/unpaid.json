@@ -60,14 +60,24 @@
     "stack": ["NextJS", "TypeScript", "React", "Tailwind", "Deta"]
   },
   {
-    "title": "a web app to find proper surf spots in portugal",
+    "title": "a web app to find good surf spots in portugal, surf-easy",
     "highlight": "portugal, surf, spots",
     "from": "04.2021",
     "until": "05.2021",
-    "employer": "LeWagon / SurfEasy",
+    "employer": "LeWagon",
     "url": "",
     "repo": "https://github.com/CharlesOuverleaux/surfeasy",
-    "stack": ["Ruby", "Redis", "HTML", "Stockfish", "🏄"]
+    "stack": ["Ruby", "Redis", "HTML", "🏄", ""]
+  },
+  {
+    "title": "a platform to rent tech people, rent-a-techy",
+    "highlight": "platform, tech, people",
+    "from": "05.2021",
+    "until": "05.2021",
+    "employer": "LeWagon",
+    "url": "",
+    "repo": "https://github.com/CharlesOuverleaux/rent-a-techy",
+    "stack": ["Ruby", "HTML", "CSS", "", ""]
   },
   {
     "title": "citefight, a multiplayer twitter guessing game",
