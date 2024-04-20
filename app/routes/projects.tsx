@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import ContactIcons from "~/components/contactIcons";
 import paidProjectsImport from "~/projects/paid.json";
 import unpaidProjectsImport from "~/projects/unpaid.json";
@@ -32,10 +32,15 @@ export default function ProjectsPage() {
     };
   });
 
+  const containerRef = useRef(null);
+
   return (
     <div className="container">
       {/* first screen */}
-      <div className="tiktok p-6 flex flex-col gap-8 justify-center items-start">
+      <div
+        className="tiktok p-6 flex flex-col gap-8 justify-center items-start"
+        ref={containerRef}
+      >
         <div>
           Swipe up to see my past <mark>projects</mark>, they are sorted by
           recency in a TikTok-like feed 📺
@@ -129,7 +134,15 @@ export default function ProjectsPage() {
             </div>
           </div>
           {/* page number */}
-          <div className="mt-auto ml-auto text-sm">
+          <div className="mt-auto ml-auto text-sm lg:text-xl">
+            <button
+              onClick={() => {
+                containerRef.current.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="font-bold py-2 px-4 rounded mr-4"
+            >
+              Reset ⬆️
+            </button>
             {i + 1}/{projects.length}
           </div>
         </div>
