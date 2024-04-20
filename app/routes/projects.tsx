@@ -111,7 +111,7 @@ export default function ProjectsPage() {
                   </a>
                 </u>
               ) : (
-                <span>not hosted 😔</span>
+                <span>not hosted...</span>
               )}
             </div>
             {/* repository */}
@@ -124,7 +124,7 @@ export default function ProjectsPage() {
                   </a>
                 </u>
               ) : (
-                <span>not open source 😔</span>
+                <span>not open source...</span>
               )}
             </div>
           </div>

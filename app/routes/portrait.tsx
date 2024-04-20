@@ -68,7 +68,8 @@ export default function Portrait() {
         leisure <mark>interests</mark>
       </div>
       <div>
-        {"> "}beach volleyball, gym, cycling, skiing (official ski instructor)
+        {"> "}beach volleyball, weight training, cycling, skiing (official ski
+        instructor)
       </div>
       <div>{"> "}sustainability, self-development, nutrition</div>
       <div>{"> "}private (coding) projects, YouTube 😇</div>
