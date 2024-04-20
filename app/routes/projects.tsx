@@ -139,7 +139,7 @@ export default function ProjectsPage() {
               onClick={() => {
                 containerRef.current.scrollIntoView({ behavior: "smooth" });
               }}
-              className="font-bold py-2 px-4 rounded mr-4"
+              className="py-2 px-4 rounded mr-4"
             >
               Reset ⬆️
             </button>
