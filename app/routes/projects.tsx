@@ -32,14 +32,14 @@ export default function ProjectsPage() {
     };
   });
 
-  const containerRef = useRef(null);
+  const firstScreenRef = useRef(null);
 
   return (
     <div className="container">
       {/* first screen */}
       <div
         className="tiktok p-6 flex flex-col gap-8 justify-center items-start"
-        ref={containerRef}
+        ref={firstScreenRef}
       >
         <div>
           Swipe up to see my past <mark>projects</mark>, they are sorted by
@@ -136,10 +136,10 @@ export default function ProjectsPage() {
           {/* page number */}
           <div className="mt-auto ml-auto text-sm lg:text-xl">
             <button
+              className="py-2 px-4 rounded mr-1"
               onClick={() => {
-                containerRef.current.scrollIntoView({ behavior: "smooth" });
+                firstScreenRef.current.scrollIntoView({ behavior: "smooth" });
               }}
-              className="py-2 px-4 rounded mr-4"
             >
               Reset ⬆️
             </button>
