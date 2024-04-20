@@ -1,44 +1,6 @@
 import ContactIcons from "~/components/contactIcons";
 import { calculateAge } from "~/utils";
 
-const stack = {
-  frequently: [
-    "Node",
-    "TypeScript",
-    "JavaScript",
-    "Remix",
-    "React",
-    "HTML",
-    "CSS",
-    "Tailwind",
-    "PostgreSQL",
-    "Playwright",
-    "JEST",
-    "Vercel",
-    "DO Droplets",
-    "GH Actions",
-    "git",
-    "terminal",
-    "VSCode",
-    "MacBook",
-    "Shortcuts 🤗",
-  ],
-  sometimes: [
-    "Kubernetes",
-    "Prometheus",
-    "Kotlin",
-    "Java",
-    "SpringBoot",
-    "Redis",
-    "NextJS",
-    "Ruby",
-    "C#.NET",
-    "VBA",
-    "SQL",
-  ],
-  rarely: ["GO", "Ruby on Rails", "Strapi", "Wordpress"],
-};
-
 export default function Portrait() {
   const age = calculateAge();
 
@@ -58,6 +20,7 @@ export default function Portrait() {
       {/* image */}
       <div className="mt-8 mb-8 w-44 h-44">
         <img
+          rel="preload"
           className="rounded-full w-full h-full object-cover"
           src="/hannes.png"
           alt="hannes"
@@ -91,33 +54,26 @@ export default function Portrait() {
         </div>
       </div>
       <br />
-      {/* things */}
+      {/* social work */}
       <div className="w-full text-center">
-        <mark>things</mark> I use...
+        <mark>social</mark> work
       </div>
-      {/* frequently */}
-      <div className="flex justify-center items-start gap-4 flex-wrap lg:flex-nowrap w-full">
-        <div className="lg:mt-6 mt-2 flex flex-col justify-start items-center gap-1 w-full">
-          <div className="mb-2">{"> "}frequently</div>
-          {stack.frequently.map((item) => (
-            <div key={item}>{item}</div>
-          ))}
-        </div>
-        {/* sometimes */}
-        <div className="lg:mt-6 mt-2 flex flex-col justify-start items-center gap-1 w-full">
-          <div className="mb-2">{"> "}sometimes</div>
-          {stack.sometimes.map((item) => (
-            <div key={item}>{item}</div>
-          ))}
-        </div>
-        {/* rarely */}
-        <div className="lg:mt-6 mt-2 flex flex-col justify-start items-center gap-1 w-full">
-          <div className="mb-2">{"> "}rarely</div>
-          {stack.rarely.map((item) => (
-            <div key={item}>{item}</div>
-          ))}
-        </div>
+      <div>{"> "}chairman for student initative &apos;WINitiative&apos;</div>
+      <div>{"> "}erasmus-program tutor for a US student</div>
+      <div>{"> "}Joblinge mentor in Berlin</div>
+      <br />
+
+      {/* interesting things */}
+      <div className="w-full text-center">
+        leisure <mark>interests</mark>
       </div>
+      <div>
+        {"> "}beach volleyball, gym, cycling, skiing (official ski instructor)
+      </div>
+      <div>{"> "}sustainability, self-development, nutrition</div>
+      <div>{"> "}private (coding) projects, YouTube 😇</div>
+      <br />
+
       <ContactIcons />
       <a
         href="/"

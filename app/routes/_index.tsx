@@ -40,7 +40,10 @@ export default function Index() {
       </div>
       <br />
       <u>
-        <a href="/portrait">portrait & stack</a>
+        <a href="/portrait">portrait</a>
+      </u>
+      <u>
+        <a href="/stack">stack</a>
       </u>
       <u>
         <a href="/projects">projects</a>
