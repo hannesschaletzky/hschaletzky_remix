@@ -16,6 +16,16 @@ export default function Index() {
 
   return (
     <div className="flex flex-col gap-1 justify-center items-center text-center lg:h-screen p-6">
+      {/* image */}
+      <div className="my-4 w-32 h-32">
+        <img
+          rel="preload"
+          className="rounded-full w-full h-full object-cover"
+          src="/hannes.png"
+          alt="hannes"
+        />
+      </div>
+
       <div>👋 I am Hannes</div>
       <div>
         I do <mark>software</mark> engineering in
@@ -31,6 +41,7 @@ export default function Index() {
         {"> "}data analytics <br />
       </div>
       <br />
+
       <div>
         I am a <mark>generalist</mark>
       </div>

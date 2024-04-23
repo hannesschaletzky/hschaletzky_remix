@@ -4,14 +4,40 @@ import paidProjectsImport from "~/projects/paid.json";
 import unpaidProjectsImport from "~/projects/unpaid.json";
 import { calculateMonthsDifference } from "~/utils";
 
+type Project = {
+  title: string;
+  highlight: string;
+  titleWithHighlights: JSX.Element;
+  duration: number;
+  from: string;
+  until: string;
+  employer: string;
+  url: string;
+  repo: string;
+  stack: string[];
+};
+
 export default function ProjectsPage() {
   const [selectedOption, setSelectedOption] = useState<
-    "professional" | "private"
-  >("professional");
+    "professional" | "private" | "initial"
+  >("initial");
+  const [projects, setProjects] = useState<Project[]>([]);
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handleRadioChange = (event: any) => {
-    setSelectedOption(event.target.value);
+  const handleRadioChange = (selection: "professional" | "private") => {
+    setSelectedOption(selection);
+
+    setProjects(
+      (selection == "professional"
+        ? paidProjectsImport
+        : unpaidProjectsImport
+      ).map((project) => {
+        return {
+          ...project,
+          duration: calculateMonthsDifference(project.from, project.until),
+          titleWithHighlights: highlightWords(project.title, project.highlight),
+        };
+      })
+    );
   };
 
   function highlightWords(title: string, list: string) {
@@ -22,18 +48,7 @@ export default function ProjectsPage() {
     return <div>{highlightedString.join(" ")}</div>;
   }
 
-  const projects = (
-    selectedOption == "professional" ? paidProjectsImport : unpaidProjectsImport
-  ).map((project) => {
-    return {
-      ...project,
-      duration: calculateMonthsDifference(project.from, project.until),
-      titleWithHighlights: highlightWords(project.title, project.highlight),
-    };
-  });
-
-  const firstScreenRef = useRef(null);
-  const firstProjectRef = useRef(null);
+  const firstScreenRef = useRef<HTMLDivElement | null>(null);
 
   return (
     <div className="container">
@@ -43,12 +58,10 @@ export default function ProjectsPage() {
         ref={firstScreenRef}
       >
         <div>
-          Find my past <mark>projects</mark> here, they are sorted by recency in
-          a TikTok-like feed 📺
+          My past <mark>projects</mark> in a TikTok-like feed 📺
         </div>
         <div>
-          {"> "}But, unlike TikTok, here you can <mark>choose</mark> what you
-          want to see
+          {"> "}Unlike TikTok, <mark>choose</mark> what you want to see here
         </div>
         <div className="flex items-center justify-center">
           <input
@@ -58,7 +71,7 @@ export default function ProjectsPage() {
             className="w-4 h-4 accent-[#ffe100]"
             id="default-radio-1"
             checked={selectedOption === "professional"}
-            onChange={handleRadioChange}
+            onChange={() => handleRadioChange("professional")}
           />
           <label htmlFor="default-radio-1" className="ms-2">
             Professional projects
@@ -72,23 +85,20 @@ export default function ProjectsPage() {
             className="w-4 h-4 accent-[#ffe100]"
             id="default-radio-2"
             checked={selectedOption === "private"}
-            onChange={handleRadioChange}
+            onChange={() => handleRadioChange("private")}
           />
           <label htmlFor="default-radio-2" className="ms-2">
             Private projects
           </label>
         </div>
-        <div className="py-2 px-4 rounded mr-1">
-          ⬇️ <mark>swipe down</mark> or use the arrow down key ⬇️
+        <div hidden={selectedOption != "initial"}>... 😊</div>
+        <div hidden={selectedOption == "initial"}>
+          ⬇️ <mark>swipe</mark> down ⬇️
         </div>
       </div>
       {/* projects */}
       {projects.map((project, i) => (
-        <div
-          className="tiktok p-6 flex flex-col gap-4"
-          key={project.title}
-          ref={firstProjectRef}
-        >
+        <div className="tiktok p-6 flex flex-col gap-4" key={project.title}>
           <div>
             {"> "}
             <span
@@ -144,12 +154,15 @@ export default function ProjectsPage() {
           {/* page number */}
           <div className="mt-auto ml-auto text-sm lg:text-xl">
             <button
-              className="py-2 px-4 rounded mr-1"
+              className="py-1 px-2 mr-2 rounded bg-gray-300"
               onClick={() => {
-                firstScreenRef.current.scrollIntoView({ behavior: "smooth" });
+                if (firstScreenRef.current) {
+                  setSelectedOption("initial");
+                  firstScreenRef.current.scrollIntoView({ behavior: "smooth" });
+                }
               }}
             >
-              Reset ⬆️
+              Reset
             </button>
             {i + 1}/{projects.length}
           </div>
