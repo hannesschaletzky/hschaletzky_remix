@@ -33,6 +33,7 @@ export default function ProjectsPage() {
   });
 
   const firstScreenRef = useRef(null);
+  const firstProjectRef = useRef(null);
 
   return (
     <div className="container">
@@ -42,8 +43,8 @@ export default function ProjectsPage() {
         ref={firstScreenRef}
       >
         <div>
-          Swipe up to see my past <mark>projects</mark>, they are sorted by
-          recency in a TikTok-like feed 📺
+          Find my past <mark>projects</mark> here, they are sorted by recency in
+          a TikTok-like feed 📺
         </div>
         <div>
           {"> "}But, unlike TikTok, here you can <mark>choose</mark> what you
@@ -77,10 +78,17 @@ export default function ProjectsPage() {
             Private projects
           </label>
         </div>
+        <div className="py-2 px-4 rounded mr-1">
+          ⬇️ <mark>swipe down</mark> or use the arrow down key ⬇️
+        </div>
       </div>
       {/* projects */}
       {projects.map((project, i) => (
-        <div className="tiktok p-6 flex flex-col gap-4" key={project.title}>
+        <div
+          className="tiktok p-6 flex flex-col gap-4"
+          key={project.title}
+          ref={firstProjectRef}
+        >
           <div>
             {"> "}
             <span
