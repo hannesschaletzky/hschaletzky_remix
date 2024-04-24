@@ -4,7 +4,7 @@
 
 /* see here: https://codepen.io/ellie_html/pen/dyYjZyB */
 .container {
-  height: 100vh;
+  height: 100dvh;
   width: 100vw;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
@@ -12,7 +12,7 @@
 }
 
 .tiktok {
-  height: 100vh;
+  height: 100dvh;
   width: 100vw;
   scroll-snap-align: start;
 }

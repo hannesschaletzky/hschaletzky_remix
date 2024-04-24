@@ -60,9 +60,9 @@ export default function ProjectsPage() {
   }, [projects]);
 
   const handleReset = () => {
+    scrollIntoView(firstScreenId);
     setSelection("none");
     setProjects([]);
-    scrollIntoView(firstScreenId);
   };
 
   const handleSwipeUp = (e: any) => {
@@ -210,15 +210,17 @@ export default function ProjectsPage() {
         </div>
       ))}
       {/* last screen */}
-      <div className="tiktok flex flex-col gap-2 justify-center items-center">
-        <ContactIcons />
-        <a
-          href="/"
-          className="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5"
-        >
-          Back
-        </a>
-      </div>
+      {projects.length > 0 && (
+        <div className="tiktok flex flex-col gap-2 justify-center items-center">
+          <ContactIcons />
+          <a
+            href="/"
+            className="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5"
+          >
+            Back
+          </a>
+        </div>
+      )}
     </div>
   );
 }
