@@ -91,7 +91,12 @@ export default function ProjectsPage() {
             Private projects
           </label>
         </div>
-        <div hidden={selectedOption != "initial"}>... 😊</div>
+        <div
+          hidden={selectedOption != "initial"}
+          className="text-white [text-shadow:_0_0_0_rgb(0_0_0_/_0%)]"
+        >
+          thisIsHidden
+        </div>
         <div hidden={selectedOption == "initial"}>
           ⬇️ <mark>swipe</mark> down ⬇️
         </div>

@@ -58,9 +58,30 @@ export default function Portrait() {
       <div className="w-full text-center">
         <mark>social</mark> work
       </div>
-      <div>{"> "}chairman for student initative &apos;WINitiative&apos;</div>
-      <div>{"> "}erasmus-program tutor for a US student</div>
-      <div>{"> "}Joblinge mentor in Berlin</div>
+      <div>
+        {"> "}chairman for student initative{" "}
+        <a
+          href="https://www.uni-augsburg.de/de/fakultaet/fai/informatik/fur-studierende/studiengange-informatik-bachelor/wirtschaftsinformatik-bsc/community/#DasZeichnetUnsAus"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <u>WINitiative</u>
+        </a>
+      </div>
+      <div>
+        {"> "}
+        <a href="https://www.erasmusplus.de/" target="_blank" rel="noreferrer">
+          <u>Erasmus</u>
+        </a>{" "}
+        tutor for a US student
+      </div>
+      <div>
+        {"> "}
+        <a href="https://www.joblinge.de/" target="_blank" rel="noreferrer">
+          <u>Joblinge</u>
+        </a>{" "}
+        mentor in Berlin
+      </div>
       <br />
 
       {/* interesting things */}
