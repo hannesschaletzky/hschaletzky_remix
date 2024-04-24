@@ -54,7 +54,9 @@ export default function ProjectsPage() {
   }, [selection]);
 
   useEffect(() => {
-    scrollIntoView("project0");
+    if (projects.length > 0) {
+      scrollIntoView("project0");
+    }
   }, [projects]);
 
   const handleReset = () => {
