@@ -21,7 +21,7 @@ export default function Index() {
         <img
           rel="preload"
           className="rounded-full w-full h-full object-cover"
-          src="/hannes.png"
+          src="/hannes2.png"
           alt="hannes"
         />
       </div>
