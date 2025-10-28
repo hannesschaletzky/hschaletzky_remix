@@ -126,6 +126,12 @@ export default function ProjectsPage() {
             Private projects
           </label>
         </div>
+        <a
+          href="/"
+          className="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5"
+        >
+          Back
+        </a>
       </div>
       {/* projects */}
       {projects.map((project, i) => (
@@ -187,7 +193,7 @@ export default function ProjectsPage() {
             </div>
           </div>
           {/* page number */}
-          <div className="mt-auto ml-auto text-sm lg:text-xl">
+          <div className="mt-auto mr-auto text-xl lg:text-2xl">
             <button
               className="py-1 px-2 mr-2"
               data-value={i}

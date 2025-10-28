@@ -61,6 +61,14 @@ export default function Index() {
       </u>
       <br />
       <ContactIcons />
+      <a
+        href="/Impressum_HannesSchaletzky.pdf"
+        rel="noopener noreferrer"
+        target="_blank"
+        className="text-sm"
+      >
+        <div>Imprint</div>
+      </a>
     </div>
   );
 }
