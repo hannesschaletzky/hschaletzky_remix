@@ -15,7 +15,7 @@ export default function Index() {
   const experience = new Date().getFullYear() - 2019;
 
   return (
-    <div className="flex flex-col gap-1 justify-center items-center text-center lg:h-screen p-6">
+    <div className="flex flex-col gap-1 justify-center items-center text-center  p-6">
       {/* image */}
       <div className="my-4 w-32 h-32">
         <img
