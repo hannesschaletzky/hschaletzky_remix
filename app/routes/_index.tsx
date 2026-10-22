@@ -61,14 +61,25 @@ export default function Index() {
       </u>
       <br />
       <ContactIcons />
-      <a
-        href="/Impressum_HannesSchaletzky.pdf"
-        rel="noopener noreferrer"
-        target="_blank"
-        className="text-sm"
-      >
-        <div>Imprint</div>
-      </a>
+      <div className="flex gap-4">
+        <a
+          href="/Impressum_HannesSchaletzky.pdf"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="text-sm"
+        >
+          <div>Imprint</div>
+        </a>
+        <div className="text-sm">|</div>
+        <a
+          href="/DataPrivacy_HannesSchaletzky.pdf"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="text-sm"
+        >
+          <div>Data Privacy Policy</div>
+        </a>
+      </div>
     </div>
   );
 }
