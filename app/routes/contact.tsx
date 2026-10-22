@@ -24,12 +24,6 @@ export default function Contact() {
         </a>
       </Section>
 
-      <Section title="phone">
-        <a href="tel:+4917632267236">
-          <u>+49 176 32267236</u>
-        </a>
-      </Section>
-
       <Section title="location">
         <div>Berlin · on-site & remote</div>
       </Section>
