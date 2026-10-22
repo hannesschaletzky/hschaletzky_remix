@@ -6,6 +6,11 @@ import { calculateMonthsDifference } from "~/utils";
 
 export const meta: MetaFunction = () => [
   { title: "Side Projects | Hannes Schaletzky" },
+  {
+    name: "description",
+    content:
+      "Side projects by Hannes Schaletzky – web apps, tools and experiments built for friends, clubs and myself.",
+  },
 ];
 
 const projects = privateProjects.map((project) => ({

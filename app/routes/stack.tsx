@@ -2,7 +2,14 @@ import type { MetaFunction } from "@remix-run/node";
 import ContactIcons from "~/components/contactIcons";
 import Section from "~/components/section";
 
-export const meta: MetaFunction = () => [{ title: "Stack | Hannes Schaletzky" }];
+export const meta: MetaFunction = () => [
+  { title: "Stack | Hannes Schaletzky" },
+  {
+    name: "description",
+    content:
+      "The tech Hannes Schaletzky works with – AWS, Node.js/TypeScript, integration & data, CI/CD, testing and operations.",
+  },
+];
 
 type Group = {
   prefix?: string;

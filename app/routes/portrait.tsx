@@ -5,6 +5,11 @@ import Section from "~/components/section";
 
 export const meta: MetaFunction = () => [
   { title: "Portrait | Hannes Schaletzky" },
+  {
+    name: "description",
+    content:
+      "Hannes Schaletzky – freelance software engineer in Berlin. Values, beliefs, coaching licenses and what I do besides code.",
+  },
 ];
 
 const values = ["focus on impact", "take ownership", "open by default"];

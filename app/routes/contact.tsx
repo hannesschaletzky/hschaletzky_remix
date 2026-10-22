@@ -4,6 +4,11 @@ import Section from "~/components/section";
 
 export const meta: MetaFunction = () => [
   { title: "Contact | Hannes Schaletzky" },
+  {
+    name: "description",
+    content:
+      "Get in touch with Hannes Schaletzky – freelance integration & cloud engineer in Berlin, on-site & remote.",
+  },
 ];
 
 export default function Contact() {
