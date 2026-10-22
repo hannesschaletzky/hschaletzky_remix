@@ -53,7 +53,7 @@ export default function Portrait() {
         </div>
         <div>{"/ / "}Hannes Schaletzky</div>
         <div>
-          <mark>freelance</mark> software engineer in Berlin since 2024
+          <mark>freelance</mark> software engineer since 2024
         </div>
         <div>B.Sc. business informatics, University of Augsburg</div>
         <div>speaks German (native), English (fluent), French (basic)</div>
