@@ -7,6 +7,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import HomeLink from "~/components/homeLink";
 import styles from "~/tailwind.css";
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
@@ -27,6 +28,7 @@ export default function App() {
         <Links />
       </head>
       <body className="font-roboto [text-shadow:_0_1px_0_rgb(0_0_0_/_10%)] text-xl">
+        <HomeLink />
         <Outlet />
         <ScrollRestoration />
         <Scripts />

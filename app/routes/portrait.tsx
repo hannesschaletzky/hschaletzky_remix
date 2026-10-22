@@ -1,108 +1,167 @@
+import type { MetaFunction } from "@remix-run/node";
+import type { ReactNode } from "react";
 import ContactIcons from "~/components/contactIcons";
-import { calculateAge } from "~/utils";
+import Section from "~/components/section";
+
+export const meta: MetaFunction = () => [
+  { title: "Portrait | Hannes Schaletzky" },
+];
+
+const values = ["focus on impact", "take ownership", "open by default"];
+
+const beliefs = [
+  "honest communication is the best motivation",
+  "written async project/company updates are underrated",
+];
+
+const licenses = [
+  {
+    title: "beach volleyball coach",
+    detail: "B-license",
+  },
+  {
+    title: "ski instructor",
+    detail: "Landeslehrer 1",
+  },
+];
+
+function ExternalLink({
+  href,
+  children,
+}: {
+  href: string;
+  children: ReactNode;
+}) {
+  return (
+    <a href={href} target="_blank" rel="noreferrer">
+      <u>{children}</u>
+    </a>
+  );
+}
 
 export default function Portrait() {
-  const age = calculateAge();
-
   return (
-    <div className="flex flex-col justify-center items-center gap-2 lg:text-center p-6">
-      {/* key points */}
-      <div className="w-full">{"/ / "}Hannes Schaletzky</div>
-      <div className="w-full">
-        {"> "}2018 B.Sc. business informatics <mark>university</mark> graduate
+    <div className="flex flex-col items-center gap-10 p-6 text-center max-w-2xl mx-auto">
+      {/* intro */}
+      <div className="flex flex-col items-center gap-1 mt-8">
+        <div className="my-4 w-32 h-32">
+          <img
+            className="rounded-full w-full h-full object-cover"
+            src="/hannes.jpg"
+            alt="Hannes Schaletzky"
+          />
+        </div>
+        <div>{"/ / "}Hannes Schaletzky</div>
+        <div>
+          <mark>freelance</mark> software engineer in Berlin since 2024
+        </div>
+        <div>B.Sc. business informatics, University of Augsburg</div>
+        <div>speaks German (native), English (fluent), French (basic)</div>
       </div>
-      <div className="w-full">
-        {"> "}German, {age} years old
-      </div>
-      <div className="w-full">
-        {"> "}former coding camp <mark>teacher</mark>
-      </div>
-      {/* image */}
-      <div className="mt-8 mb-8 w-44 h-44">
-        <img
-          rel="preload"
-          className="rounded-full w-full h-full object-cover"
-          src="/hannes2.png"
-          alt="hannes"
-        />
-      </div>
+
       {/* values */}
-      <div className="w-full text-center">
-        core <mark>values</mark>
-      </div>
-      <div>{"> "}focus on impact</div>
-      <div>{"> "}take ownership</div>
-      <div>{"> "}open by default</div>
-      <br />
-      {/* believes */}
-      <div className="w-full text-center">
-        guiding <mark>beliefs</mark>
-      </div>
-      <div className="flex flex-col justify-center items-center gap-2 text-center">
-        <div>&quot;honest communication is the best motivation&quot;</div>
-        <div>
-          &quot;regularly switching contexts heavily decreases
-          productivity&quot;
-        </div>
-        <div>&quot;ad-hoc meetings are the most effective ones&quot;</div>
-        <div>
-          &quot;project stagnation will not be resolved by following the agile
-          approach more strictly&quot;
-        </div>
-        <div>
-          &quot;written async project/company updates are underrated&quot;
-        </div>
-      </div>
-      <br />
+      <Section
+        title={
+          <>
+            core <mark>values</mark>
+          </>
+        }
+      >
+        {values.map((value) => (
+          <div key={value}>
+            {"> "}
+            {value}
+          </div>
+        ))}
+      </Section>
+
+      {/* beliefs */}
+      <Section
+        title={
+          <>
+            guiding <mark>beliefs</mark>
+          </>
+        }
+      >
+        {beliefs.map((belief) => (
+          <div key={belief}>&quot;{belief}&quot;</div>
+        ))}
+      </Section>
+
+      {/* licenses */}
+      <Section
+        title={
+          <>
+            <mark>coaching</mark> & licenses
+          </>
+        }
+      >
+        {licenses.map((license) => (
+          <div key={license.title}>
+            {"> "}
+            {license.title} ({license.detail})
+          </div>
+        ))}
+      </Section>
+
       {/* social work */}
-      <div className="w-full text-center">
-        <mark>social</mark> work
-      </div>
-      <div>
-        {"> "}chairman for student initative{" "}
+      <Section
+        title={
+          <>
+            <mark>social</mark> work
+          </>
+        }
+      >
+        <div>
+          {"> "}website support for the{" "}
+          <ExternalLink href="https://freundeskreis-peutinger.de/">
+            Freundeskreis Peutinger-Gymnasium Augsburg e. V.
+          </ExternalLink>
+        </div>
+        <div>
+          {"> "}founding chairman of the student initiative{" "}
+          <ExternalLink href="https://winitiative-augsburg.de/">
+            WINitiative
+          </ExternalLink>
+        </div>
+        <div>
+          {"> "}
+          <ExternalLink href="https://www.erasmusplus.de/">
+            Erasmus
+          </ExternalLink>{" "}
+          tutor for a US student
+        </div>
+        <div>
+          {"> "}
+          <ExternalLink href="https://www.joblinge.de/">
+            Joblinge
+          </ExternalLink>{" "}
+          mentor in Berlin
+        </div>
+      </Section>
+
+      {/* leisure */}
+      <Section
+        title={
+          <>
+            leisure <mark>interests</mark>
+          </>
+        }
+      >
+        <div>{"> "}beach volleyball, weight training, cycling, skiing</div>
+        <div>{"> "}sustainability, self-development, nutrition</div>
+        <div>{"> "}private (coding) projects, YouTube 😇</div>
+      </Section>
+
+      <div className="flex flex-col items-center gap-2">
+        <ContactIcons />
         <a
-          href="https://www.uni-augsburg.de/de/fakultaet/fai/informatik/fur-studierende/studiengange-informatik-bachelor/wirtschaftsinformatik-bsc/community/#DasZeichnetUnsAus"
-          target="_blank"
-          rel="noreferrer"
+          href="/"
+          className="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5"
         >
-          <u>WINitiative</u>
+          Back
         </a>
       </div>
-      <div>
-        {"> "}
-        <a href="https://www.erasmusplus.de/" target="_blank" rel="noreferrer">
-          <u>Erasmus</u>
-        </a>{" "}
-        tutor for a US student
-      </div>
-      <div>
-        {"> "}
-        <a href="https://www.joblinge.de/" target="_blank" rel="noreferrer">
-          <u>Joblinge</u>
-        </a>{" "}
-        mentor in Berlin
-      </div>
-      <br />
-
-      {/* interesting things */}
-      <div className="w-full text-center">
-        leisure <mark>interests</mark>
-      </div>
-      <div>
-        {"> "}beach volleyball, weight training, cycling, skiing (official ski
-        instructor)
-      </div>
-      <div>{"> "}sustainability, self-development, nutrition</div>
-      <div>{"> "}private (coding) projects, YouTube 😇</div>
-      <br />
-
-      <ContactIcons />
-      <a
-        href="/"
-        className="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5"
-      >
-        Back
-      </a>
     </div>
   );
 }

@@ -25,8 +25,13 @@ export function calculateMonthsDifference(startDate: string, endDate: string) {
   const startMonth = parseInt(startDate.split(".")[0]) - 1; // zero-indexed months
   const startYear = parseInt(startDate.split(".")[1]);
 
-  const endMonth = parseInt(endDate.split(".")[0]) - 1; // zero-indexed months
-  const endYear = parseInt(endDate.split(".")[1]);
+  // an end without a date (e.g. "forever") marks an ongoing project
+  const ongoing = !endDate.includes(".");
+  const now = new Date();
+  const endMonth = ongoing
+    ? now.getMonth()
+    : parseInt(endDate.split(".")[0]) - 1; // zero-indexed months
+  const endYear = ongoing ? now.getFullYear() : parseInt(endDate.split(".")[1]);
 
   const monthsDifference =
     (endYear - startYear) * 12 + (endMonth - startMonth) + 1;

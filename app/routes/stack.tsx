@@ -1,96 +1,130 @@
+import type { MetaFunction } from "@remix-run/node";
 import ContactIcons from "~/components/contactIcons";
+import Section from "~/components/section";
 
-const stack = {
-  frequently: [
-    "Node",
-    "TypeScript",
-    "JavaScript",
-    "Remix",
-    "React",
-    "HTML",
-    "CSS",
-    "Tailwind",
-    "PostgreSQL",
-    "Playwright",
-    "JEST",
-    "Vercel",
-    "GitHub",
-    "GH Actions",
-    "DO Droplets",
-    "terminal",
-    "git",
-    "npm",
-    "dotfiles",
-    "VSCode",
-    "MacBook",
-    "Shortcuts 🤗",
-  ],
-  sometimes: [
-    "Kubernetes",
-    "Terraform",
-    "Cloud-init",
-    "Nginx",
-    "Certbot",
-    "Prometheus",
-    "Kotlin",
-    "Java",
-    "SpringBoot",
-    "Redis",
-    "NextJS",
-    "Svelte",
-    "Redux",
-    "Ruby",
-    "C#.NET",
-    "VBA",
-    "SQL",
-  ],
-  rarely: ["GO", "Ruby on Rails", "Strapi", "Wordpress", "Swift", "xCode"],
+export const meta: MetaFunction = () => [{ title: "Stack | Hannes Schaletzky" }];
+
+type Group = {
+  prefix?: string;
+  highlight: string;
+  suffix?: string;
+  items: string[];
 };
+
+const groups: Group[] = [
+  {
+    prefix: "cloud & ",
+    highlight: "AWS",
+    items: [
+      "ECS/Fargate",
+      "ECR",
+      "IAM",
+      "VPC",
+      "SQS",
+      "S3",
+      "DynamoDB",
+      "Terraform",
+    ],
+  },
+  {
+    highlight: "backend",
+    items: ["Node.js", "TypeScript", "REST APIs", "Drizzle ORM", "PostgreSQL"],
+  },
+  {
+    prefix: "integration & ",
+    highlight: "data",
+    items: [
+      "messaging/event-driven",
+      "ETL",
+      "MS SQL Server/T-SQL",
+      "SAML",
+      "MS Entra",
+      "MS Exchange",
+      "PowerShell",
+    ],
+  },
+  {
+    prefix: "delivery & ",
+    highlight: "testing",
+    items: ["Docker", "GitHub Actions", "Jest", "Playwright"],
+  },
+  {
+    highlight: "operations",
+    items: [
+      "Grafana",
+      "Prometheus",
+      "Mezmo",
+      "logging & alerting",
+      "on-call",
+    ],
+  },
+  {
+    prefix: "web & ",
+    highlight: "frontend",
+    items: ["Next.js", "Remix", "React", "Tailwind"],
+  },
+  {
+    prefix: "also ",
+    highlight: "experienced",
+    suffix: " with",
+    items: [
+      "Kotlin/Spring Boot",
+      "C#/.NET",
+      "Kubernetes",
+      "Hetzner Cloud",
+      "Azure DevOps",
+      "SSAS",
+      "VBA",
+    ],
+  },
+  {
+    prefix: "how I ",
+    highlight: "work",
+    items: [
+      "domain-driven design",
+      "clean code",
+      "TDD",
+      "infrastructure as code",
+      "pair programming",
+      "AI-assisted development",
+    ],
+  },
+  {
+    prefix: "daily ",
+    highlight: "drivers",
+    items: ["terminal", "git", "VSCode", "MacBook", "Shortcuts 🤗"],
+  },
+];
 
 export default function Stack() {
   return (
-    <div className="flex flex-col justify-center items-center gap-2 lg:text-center p-6">
-      {/* things */}
-      <div className="w-full text-center">things I use...</div>
-      {/* frequently */}
-      <div className="flex justify-center items-start gap-4 flex-wrap lg:flex-nowrap w-full">
-        <div className="lg:mt-6 mt-2 flex flex-col justify-start items-center gap-1 w-full">
-          <div className="mb-2">
-            {"> "}
-            <mark>frequently</mark>
-          </div>
-          {stack.frequently.map((item) => (
-            <div key={item}>{item}</div>
-          ))}
-        </div>
-        {/* sometimes */}
-        <div className="lg:mt-6 mt-2 flex flex-col justify-start items-center gap-1 w-full">
-          <div className="mb-2">
-            {"> "}
-            <mark>sometimes</mark>
-          </div>
-          {stack.sometimes.map((item) => (
-            <div key={item}>{item}</div>
-          ))}
-        </div>
-        {/* rarely */}
-        <div className="lg:mt-6 mt-2 flex flex-col justify-start items-center gap-1 w-full">
-          <div className="mb-2">
-            {"> "}
-            <mark>rarely</mark>
-          </div>
-          {stack.rarely.map((item) => (
-            <div key={item}>{item}</div>
-          ))}
-        </div>
+    <div className="flex flex-col items-center gap-10 p-6 text-center max-w-2xl mx-auto">
+      <div className="mt-10">things I work with...</div>
+
+      {groups.map((group) => (
+        <Section
+          key={group.highlight}
+          title={
+            <>
+              {group.prefix}
+              <mark>{group.highlight}</mark>
+              {group.suffix}
+            </>
+          }
+        >
+          <div>{group.items.join(" · ")}</div>
+        </Section>
+      ))}
+
+      <div className="flex flex-col items-center gap-2">
+        <ContactIcons />
+        <a
+          href="/"
+          className="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5"
+        >
+          Back
+        </a>
       </div>
-      <ContactIcons />
-      <a
-        href="/"
-        className="text-white bg-black font-medium rounded-lg text-sm px-5 py-2.5"
-      >
-        Back
-      </a>
     </div>
   );
 }
